@@ -1,0 +1,187 @@
+# GeoAI平台默认配置文件
+
+# 数据配置
+data:
+  # 数据目录
+  raw_data_dir: "data/raw"
+  processed_data_dir: "data/processed"
+  external_data_dir: "data/external"
+  
+  # 空间配置
+  spatial:
+    default_crs: "EPSG:4326"
+    default_resolution: 0.01  # 度
+    buffer_distance: 1000  # 米
+  
+  # 时间配置
+  temporal:
+    start_year: 2000
+    end_year: 2023
+    prediction_horizon: 10  # 年
+    temporal_resolution: "monthly"
+
+# 模型配置
+models:
+  # 随机森林
+  random_forest:
+    n_estimators: 100
+    max_depth: null
+    min_samples_split: 2
+    min_samples_leaf: 1
+    random_state: 42
+  
+  # SVR
+  svr:
+    kernel: "rbf"
+    C: 1.0
+    epsilon: 0.1
+    gamma: "scale"
+  
+  # 神经网络
+  neural_network:
+    hidden_layers: [128, 64, 32]
+    activation: "relu"
+    dropout_rate: 0.2
+    learning_rate: 0.001
+    epochs: 100
+    batch_size: 32
+  
+  # LSTM
+  lstm:
+    lstm_units: [64, 32]
+    sequence_length: 10
+    dropout_rate: 0.2
+    epochs: 50
+  
+  # 集成模型
+  ensemble:
+    voting_weights: [0.3, 0.3, 0.4]  # RF, SVR, LSTM权重
+
+# 分类系统配置
+classification:
+  # RUCA配置
+  ruca:
+    min_population_urban: 50000
+    min_density_urban: 1000
+  
+  # 人口密度分类
+  population_density:
+    thresholds:
+      very_high: 5000
+      high: 1500
+      medium: 500
+      low: 100
+  
+  # 夜光分类
+  nightlight:
+    viirs_thresholds:
+      urban_core: 10.0
+      urban_area: 2.0
+      peri_urban: 0.5
+      rural_lit: 0.1
+  
+  # LCZ配置
+  lcz:
+    use_pretrained_model: false
+    model_path: null
+
+# 预测配置
+prediction:
+  # 空气质量
+  air_quality:
+    pollutants: ["pm25", "no2", "o3"]
+    model_type: "ensemble"
+    include_uncertainty: true
+  
+  # 绿地
+  green_space:
+    indices: ["ndvi", "evi", "green_cover"]
+    model_type: "lstm_xgboost"
+  
+  # 特征权重
+  feature_weights:
+    meteorological: 0.3
+    emission_sources: 0.25
+    topography: 0.15
+    land_use: 0.15
+    temporal: 0.1
+    spatial: 0.05
+
+# 分析配置
+analysis:
+  # 不平等分析
+  inequality:
+    metrics: ["gini", "atkinson", "theil"]
+    income_quantiles: [0.2, 0.4, 0.6, 0.8]
+    demographic_groups: ["age", "race", "income"]
+  
+  # 脆弱性分析
+  vulnerability:
+    factors: ["age", "income", "health", "mobility"]
+    weights: [0.3, 0.3, 0.25, 0.15]
+
+# 可视化配置
+visualization:
+  # 地图配置
+  maps:
+    default_style: "openstreetmap"
+    color_schemes:
+      sequential: "viridis"
+      diverging: "RdBu"
+      categorical: "tab10"
+  
+  # 图表配置
+  plots:
+    figure_size: [10, 8]
+    dpi: 300
+    font_size: 12
+
+# API配置
+api:
+  host: "localhost"
+  port: 8000
+  debug: false
+  cors_origins: ["http://localhost:3000"]
+  
+  # 限制配置
+  rate_limits:
+    requests_per_minute: 60
+    max_prediction_years: 30
+
+# 日志配置
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/geoai_platform.log"
+  max_file_size: "10MB"
+  backup_count: 5
+
+# 计算配置
+compute:
+  n_jobs: -1  # 并行作业数，-1表示使用所有CPU
+  memory_limit: "8GB"
+  chunk_size: 1000  # 数据块大小
+  
+  # GPU配置
+  use_gpu: false
+  gpu_memory_limit: "4GB"
+
+# 缓存配置
+cache:
+  enabled: true
+  cache_dir: "cache"
+  max_cache_size: "2GB"
+  ttl: 3600  # 秒
+
+# 输出配置
+output:
+  results_dir: "results"
+  figures_dir: "figures"
+  reports_dir: "reports"
+  
+  # 导出格式
+  export_formats: ["netcdf", "geojson", "csv"]
+  
+  # 压缩选项
+  compression: "gzip"
+  compression_level: 6

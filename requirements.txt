@@ -1,0 +1,85 @@
+# Core Data Science Libraries
+numpy>=1.21.0
+pandas>=1.3.0
+scipy>=1.7.0
+scikit-learn>=1.0.0
+
+# Geospatial Libraries
+geopandas>=0.10.0
+rasterio>=1.2.0
+fiona>=1.8.0
+shapely>=1.8.0
+pyproj>=3.2.0
+folium>=0.12.0
+contextily>=1.2.0
+
+# Remote Sensing & Earth Observation
+earthengine-api>=0.1.300
+rioxarray>=0.11.0
+xarray>=0.20.0
+netCDF4>=1.5.0
+h5py>=3.6.0
+
+# Machine Learning & Deep Learning
+tensorflow>=2.8.0
+torch>=1.11.0
+torchvision>=0.12.0
+xgboost>=1.5.0
+lightgbm>=3.3.0
+catboost>=1.0.0
+
+# Time Series Analysis
+statsmodels>=0.13.0
+arch>=5.3.0
+pmdarima>=1.8.0
+
+# Visualization
+matplotlib>=3.5.0
+seaborn>=0.11.0
+plotly>=5.6.0
+bokeh>=2.4.0
+altair>=4.2.0
+
+# Web Framework & API
+fastapi>=0.75.0
+uvicorn>=0.17.0
+streamlit>=1.8.0
+dash>=2.3.0
+flask>=2.1.0
+
+# Database & Data Storage
+sqlalchemy>=1.4.0
+psycopg2-binary>=2.9.0
+pymongo>=4.1.0
+redis>=4.2.0
+
+# Configuration & Utilities
+pydantic>=1.9.0
+click>=8.1.0
+python-dotenv>=0.20.0
+tqdm>=4.64.0
+joblib>=1.1.0
+
+# Testing & Development
+pytest>=7.1.0
+pytest-cov>=3.0.0
+black>=22.3.0
+flake8>=4.0.0
+mypy>=0.950
+
+# Documentation
+sphinx>=4.5.0
+sphinx-rtd-theme>=1.0.0
+jupyter>=1.0.0
+jupyterlab>=3.3.0
+
+# Climate Data
+cdsapi>=0.5.1
+ecmwf-api-client>=1.6.0
+netcdf4>=1.5.8
+
+# Additional Utilities
+requests>=2.27.0
+aiohttp>=3.8.0
+pillow>=9.1.0
+imageio>=2.19.0
