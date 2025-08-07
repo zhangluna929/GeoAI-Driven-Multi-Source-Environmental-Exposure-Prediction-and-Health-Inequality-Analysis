@@ -1,11 +1,6 @@
 # GeoAI-Driven Multi-Source Environmental Exposure Prediction and Health Inequality Analysis Platform
 # GeoAI驱动的多源环境暴露预测与健康不平等分析平台
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![Python](https://img.shields.io/badge/python-3.8%2B-blue.svg)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-2.8%2B-orange.svg)
-![Status](https://img.shields.io/badge/status-research-red.svg)
-
 ## Abstract | 项目概述
 
 This platform represents a comprehensive computational framework that integrates cutting-edge GeoAI methodologies, advanced machine learning algorithms, and sophisticated spatiotemporal data fusion techniques for long-term environmental exposure prediction and quantitative health inequality assessment in urban environments.
@@ -16,9 +11,9 @@ The system employs a multi-layered architecture incorporating heterogeneous data
 
 该系统采用多层架构，整合异构数据源（卫星遥感、气象再分析、社会经济普查数据）、先进集成学习范式和复杂不确定性量化机制，以解决环境健康科学中的关键研究空白。
 
-## Core Technical Capabilities | 核心技术能力
+## Core Technical | 核心技术
 
-### Advanced Multi-Source Data Processing Pipeline | 高级多源数据处理管道
+### Multi-Source Data Processing | 多源数据处理
 
 #### Remote Sensing Data Integration Engine | 遥感数据集成引擎
 - **Google Earth Engine API Integration**: Automated acquisition and preprocessing of Landsat-8/9, Sentinel-2, MODIS Terra/Aqua, and VIIRS data with cloud masking algorithms and atmospheric correction protocols
@@ -46,13 +41,13 @@ The system employs a multi-layered architecture incorporating heterogeneous data
 - **Multi-Kernel Support Vector Regression**: Implementation of RBF, polynomial, and linear kernels with Bayesian optimization
 - **Deep Neural Network Architecture**: Multi-layer perceptron with advanced regularization and adaptive learning rate scheduling
 
-#### Novel Hybrid Deep Learning Models | 新颖混合深度学习模型
+#### Deep Learning Models | 深度学习模型
 - **LSTM-XGBoost Ensemble Architecture**: Innovative combination of LSTM networks for temporal patterns and XGBoost for non-linear interactions
 - **Multi-Strategy Ensemble Methods**: Implementation of weighted voting, stacking, and adaptive ensemble strategies
 - **Uncertainty Quantification Framework**: Bayesian neural networks, Monte Carlo dropout, and ensemble-based uncertainty estimation
 - **Temporal Sequence Modeling**: Specialized LSTM architectures with attention mechanisms for multi-variate time series forecasting
 
-### Advanced Urban Classification Systems | 高级城市分类系统
+### rban Classification Systems | 城市分类系统
 
 #### Multi-Paradigm Classification Framework | 多范式分类框架
 - **RUCA Classification**: Implementation of USDA methodology incorporating population density thresholds and commuting flow analysis
@@ -66,7 +61,7 @@ The system employs a multi-layered architecture incorporating heterogeneous data
 - **Environmental Impact Assessment**: Systematic evaluation of classification effects on environmental exposure estimates
 - **Uncertainty Propagation**: Monte Carlo simulation for quantifying classification uncertainty impact
 
-### Advanced Analytical Modules | 高级分析模块
+### Advanced Analytical Modules | 分析模块
 
 #### Health Inequality Quantification Engine | 健康不平等量化引擎
 - **Multi-Metric Inequality Assessment**: Comprehensive inequality indices including Gini, Theil, Atkinson indices with confidence intervals
@@ -79,19 +74,19 @@ The system employs a multi-layered architecture incorporating heterogeneous data
 ### System Architecture | 系统架构
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                    Web API Layer (FastAPI/Flask)               │
+│                    Web API Layer (FastAPI/Flask)                │
 ├─────────────────────────────────────────────────────────────────┤
-│              Analysis Engine (Inequality Assessment)           │
+│              Analysis Engine (Inequality Assessment)            │
 ├─────────────────────────────────────────────────────────────────┤
-│         Prediction Framework (Exposure Forecasting)            │
+│         Prediction Framework (Exposure Forecasting)             │
 ├─────────────────────────────────────────────────────────────────┤
-│       Classification Systems (Urban Typology Analysis)         │
+│       Classification Systems (Urban Typology Analysis)          │
 ├─────────────────────────────────────────────────────────────────┤
-│     Machine Learning Pipeline (Ensemble Model Framework)       │
+│     Machine Learning Pipeline (Ensemble Model Framework)        │
 ├─────────────────────────────────────────────────────────────────┤
-│           Data Integration Layer (Multi-Source Fusion)         │
+│           Data Integration Layer (Multi-Source Fusion)          │
 ├─────────────────────────────────────────────────────────────────┤
-│  Data Processing Modules (RS, Meteorological, Socioeconomic)   │
+│  Data Processing Modules (RS, Meteorological, Socioeconomic)    │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -143,7 +138,7 @@ Visualization and Web Technologies:
 - Docker (optional, for containerized deployment)
 ```
 
-### Advanced Environment Setup | 高级环境配置
+###  Environment Setup | 环境配置
 ```bash
 # Create isolated high-performance computing environment | 创建隔离的高性能计算环境
 conda create -n geoai-platform python=3.9
@@ -195,7 +190,7 @@ data:
   compression_level: 9  # Maximum compression for storage efficiency
 ```
 
-## Advanced Usage Examples | 高级使用示例
+## Usage Examples | 使用示例
 
 ### Comprehensive Environmental Exposure Modeling | 综合环境暴露建模
 ```python
@@ -261,7 +256,7 @@ predictions = air_quality_predictor.predict_long_term(
 )
 ```
 
-### Advanced Health Inequality Assessment | 高级健康不平等评估
+### Health Inequality Assessment | 健康不平等评估
 ```python
 from src.data_processing import SocioeconomicProcessor
 from src.analysis import EnvironmentalJusticeAnalyzer, VulnerabilityAssessment
@@ -365,7 +360,4 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 
 ---
 
-## 许可证
-
-MIT许可证，详见LICENSE文件。
 
